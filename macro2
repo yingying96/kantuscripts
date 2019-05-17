@@ -1,0 +1,76 @@
+{
+  "Name": "Save Vendor Details",
+  "CreationDate": "2019-5-17",
+  "Commands": [
+    {
+      "Command": "store",
+      "Target": "fast",
+      "Value": "!replayspeed"
+    },
+    {
+      "Command": "open",
+      "Target": "https://acme-test.uipath.com/",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"dashmenu\"]/div[5]/button",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "link=Search for Vendor",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "id=buttonShowAll",
+      "Value": ""
+    },
+    {
+      "Command": "echo",
+      "Target": "Set i = 1 as we start the extraction with the 2nd table cell.",
+      "Value": ""
+    },
+    {
+      "Command": "store",
+      "Target": "1",
+      "Value": "i"
+    },
+    {
+      "Command": "while",
+      "Target": "(${i} < 11)",
+      "Value": ""
+    },
+    {
+      "Command": "storeEval",
+      "Target": "${i}+1",
+      "Value": "i"
+    },
+    {
+      "Command": "echo",
+      "Target": "Current value of i = ${i}",
+      "Value": "i"
+    },
+    {
+      "Command": "storeText",
+      "Target": "xpath=/html/body/div/div[2]/div/table/tbody/tr[${i}]/td[2]",
+      "Value": "!csvLine"
+    },
+    {
+      "Command": "csvSave",
+      "Target": "VendorResultData",
+      "Value": ""
+    },
+    {
+      "Command": "endWhile",
+      "Target": "",
+      "Value": ""
+    },
+    {
+      "Command": "comment",
+      "Target": "Append content of !csvLine to CSV file (or create file if none exists)",
+      "Value": ""
+    }
+  ]
+}
