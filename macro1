@@ -1,0 +1,36 @@
+{
+  "Name": "Login to ACME System",
+  "CreationDate": "2019-5-17",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://acme-test.uipath.com/account/login",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=email",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=email",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=email",
+      "Value": "rpakantudemo@gmail.com"
+    },
+    {
+      "Command": "type",
+      "Target": "id=password",
+      "Value": "password"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "id=buttonLogin",
+      "Value": ""
+    }
+  ]
+}
