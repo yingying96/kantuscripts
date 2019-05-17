@@ -1,0 +1,56 @@
+{
+  "Name": "Screenshot Vendor Invoice",
+  "CreationDate": "2019-5-17",
+  "Commands": [
+    {
+      "Command": "open",
+      "Target": "https://acme-test.uipath.com/",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"dashmenu\"]/div[6]/button",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "xpath=//*[@id=\"dashmenu\"]/div[6]/button",
+      "Value": ""
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "link=Search for Invoice",
+      "Value": ""
+    },
+    {
+      "Command": "csvRead",
+      "Target": "vendorresultdata.csv",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=vendorTaxID",
+      "Value": "${!COL1}"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "id=buttonSearch",
+      "Value": ""
+    },
+    {
+      "Command": "storeImage",
+      "Target": "xpath=/html/body/div/div[2]/div/table",
+      "Value": "vendor_${!COL1}.png"
+    },
+    {
+      "Command": "comment",
+      "Target": "Export images to download folder",
+      "Value": ""
+    },
+    {
+      "Command": "localStorageExport",
+      "Target": "vendor_${!COL1}.png",
+      "Value": ""
+    }
+  ]
+}
