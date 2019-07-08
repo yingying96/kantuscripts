@@ -1,6 +1,6 @@
 {
   "Name": "Save Vendor Details",
-  "CreationDate": "2019-5-17",
+  "CreationDate": "2019-7-8",
   "Commands": [
     {
       "Command": "store",
@@ -34,18 +34,13 @@
     },
     {
       "Command": "store",
-      "Target": "1",
+      "Target": "2",
       "Value": "i"
     },
     {
-      "Command": "while",
-      "Target": "(${i} < 11)",
+      "Command": "while_v2",
+      "Target": "(${i} < 12)",
       "Value": ""
-    },
-    {
-      "Command": "storeEval",
-      "Target": "${i}+1",
-      "Value": "i"
     },
     {
       "Command": "echo",
@@ -56,6 +51,11 @@
       "Command": "storeText",
       "Target": "xpath=/html/body/div/div[2]/div/table/tbody/tr[${i}]/td[2]",
       "Value": "!csvLine"
+    },
+    {
+      "Command": "storeEval",
+      "Target": "${i}+1",
+      "Value": "i"
     },
     {
       "Command": "csvSave",
