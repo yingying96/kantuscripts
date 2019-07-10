@@ -1,11 +1,36 @@
 {
-  "Name": "Save Vendor Details",
-  "CreationDate": "2019-7-8",
+  "Name": "Login and Save Vendor Details",
+  "CreationDate": "2019-7-10",
   "Commands": [
     {
-      "Command": "store",
-      "Target": "fast",
-      "Value": "!replayspeed"
+      "Command": "open",
+      "Target": "https://acme-test.uipath.com/account/login",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=email",
+      "Value": ""
+    },
+    {
+      "Command": "click",
+      "Target": "id=email",
+      "Value": ""
+    },
+    {
+      "Command": "type",
+      "Target": "id=email",
+      "Value": "rpakantudemo@gmail.com"
+    },
+    {
+      "Command": "type",
+      "Target": "id=password",
+      "Value": "password"
+    },
+    {
+      "Command": "clickAndWait",
+      "Target": "id=buttonLogin",
+      "Value": ""
     },
     {
       "Command": "open",
