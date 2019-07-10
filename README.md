@@ -10,8 +10,6 @@ Test website used - https://acme-test.uipath.com/
 
 Please register at the test website provided.
 
-Macro 1 - Login to ACME System
+Macro 1 - Login And Save Vendor Details As CSV
 
-Macro 2 - Save Vendor Details
-
-Macro 3 - Screenshot Vendor Invoices
+Macro 2 - Screenshot Vendor Invoices
